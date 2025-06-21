@@ -1,0 +1,76 @@
+{
+  "id": "zigbeerepeater",
+  "name": {
+    "en": "Zigbee Repeater"
+  },
+  "class": "other",
+  "platforms": ["local"],
+  "connectivity": ["zigbee"],
+  "capabilities": [],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "_TZ3000_nkkl7uzv"
+    ],
+    "productId": [
+      "TS0207"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          10
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Put the device in a USB slot and let it power up. To enter pairing mode, turn the device on and off 5 times quickly."
+      }
+    }
+  },
+  "pair": [
+    {
+      "id": "instructions",
+      "template": "instructions",
+      "options": {
+        "title": {
+          "en": "Pairing Instructions"
+        },
+        "text": {
+          "en": "Follow these steps to pair your Zigbee Repeater:\n\n1. Connect the device to a USB power source\n2. Wait for the device to power up (LED should turn on)\n3. Turn the device OFF and ON 5 times quickly to enter pairing mode\n4. Click 'Continue' when ready"
+        }
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "repair": [
+    {
+      "id": "repair_instructions",
+      "template": "instructions",
+      "options": {
+        "title": {
+          "en": "Repair Device"
+        },
+        "text": {
+          "en": "To repair your Zigbee Repeater:\n\n1. Make sure the device is powered on\n2. Ensure it's within range of your Zigbee network\n3. Click 'Continue' to start the repair process"
+        }
+      }
+    }
+  ]
+}
