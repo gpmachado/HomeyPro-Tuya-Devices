@@ -1,0 +1,97 @@
+{
+  "id": "dimmer_3_gang_moes_fan",
+  "name": { 
+    "en": "MOES 3-Gang Fan Controller" 
+  },
+  "class": "socket",
+  "platforms": ["local"],
+  "connectivity": ["zigbee"],
+  "capabilities": ["onoff", "dim"],
+  "capabilitiesOptions": {
+    "dim": {
+      "opts": {
+        "duration": true
+      },
+      "title": {
+        "en": "Fan Speed"
+      },
+      "units": {
+        "en": "%"
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "approximation": {
+      "usageOn": 150,
+      "usageOff": 0
+    }
+  },
+  "zigbee": {
+    "manufacturerName": ["_TZE204_1v1dxkck"],
+    "productId": ["TS0601"],
+    "endpoints": {
+      "1": {
+        "clusters": [0, 4, 5, 61184],
+        "bindings": [25, 10]
+      }
+    },
+    "devices": {
+      "secondGang": {
+        "class": "socket",
+        "capabilities": ["onoff", "dim"],
+        "capabilitiesOptions": {
+          "dim": {
+            "title": {
+              "en": "Fan Speed"
+            },
+            "units": {
+              "en": "%"
+            }
+          }
+        },
+        "name": { 
+          "en": "Fan Controller Gang 2" 
+        },
+        "energy": {
+          "approximation": {
+            "usageOn": 150,
+            "usageOff": 0
+          }
+        }
+      },
+      "thirdGang": {
+        "class": "socket",
+        "capabilities": ["onoff", "dim"],
+        "capabilitiesOptions": {
+          "dim": {
+            "title": {
+              "en": "Fan Speed"
+            },
+            "units": {
+              "en": "%"
+            }
+          }
+        },
+        "name": {
+          "en": "Fan Controller Gang 3"
+        },
+        "energy": {
+          "approximation": {
+            "usageOn": 150,
+            "usageOff": 0
+          }
+        }
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Three fan controllers will be created, one for each channel. Press reset switch 10 times rapidly until continuous beep to enter pairing mode."
+      }
+    }
+  }
+}

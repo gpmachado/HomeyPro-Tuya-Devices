@@ -1,0 +1,110 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Speed Control"
+    },
+    "children": [
+      {
+        "id": "minimumBrightness",
+        "type": "number",
+        "label": {
+          "en": "Min Speed"
+        },
+        "hint": {
+          "en": "Minimum fan speed percentage"
+        },
+        "value": 10,
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "units": "%"
+      },
+      {
+        "id": "maximumBrightness",
+        "type": "number",
+        "label": {
+          "en": "Max Speed"
+        },
+        "hint": {
+          "en": "Maximum fan speed percentage"
+        },
+        "value": 100,
+        "min": 2,
+        "max": 100,
+        "step": 1,
+        "units": "%"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Behavior"
+    },
+    "children": [
+      {
+        "id": "powerOnState",
+        "type": "dropdown",
+        "label": {
+          "en": "Power-On"
+        },
+        "hint": {
+          "en": "Fan behavior after power outage"
+        },
+        "value": "memory",
+        "values": [
+          {
+            "id": "off",
+            "label": {
+              "en": "Always Off"
+            }
+          },
+          {
+            "id": "on",
+            "label": {
+              "en": "Always On"
+            }
+          },
+          {
+            "id": "memory",
+            "label": {
+              "en": "Remember State"
+            }
+          }
+        ]
+      },
+      {
+        "id": "backlightMode",
+        "type": "dropdown",
+        "label": {
+          "en": "LED Mode"
+        },
+        "hint": {
+          "en": "Status LED behavior"
+        },
+        "value": "normal",
+        "values": [
+          {
+            "id": "off",
+            "label": {
+              "en": "Always Off"
+            }
+          },
+          {
+            "id": "normal",
+            "label": {
+              "en": "On when running"
+            }
+          },
+          {
+            "id": "inverted",
+            "label": {
+              "en": "On when stopped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
